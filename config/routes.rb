@@ -1,9 +1,12 @@
 Commute::Application.routes.draw do
-  get "pages/home"
+  
+  root :to => 'pages#home'
 
-  get "pages/contact"
+  match '/home', :to => 'pages#home'
+  match '/contact', :to => 'pages#contact'
+  match '/about', :to => 'pages#about'
 
-  get "pages/about"
+
 
 
   # The priority is based upon order of creation:
