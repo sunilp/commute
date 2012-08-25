@@ -3,6 +3,7 @@
 	<head><title><%= title %> </title>
 <%= csrf_meta_tag %>
 
+
 <%= stylesheet_link_tag 'screen', :media => 'screen' %>
 <%= stylesheet_link_tag 'print', :media => 'print' %>
 
@@ -10,7 +11,20 @@
 	</head>
 	
 <body>
-	<%= yield %>
+	<div class="container">
+		<header>
+			--------Header--------
+		</header>
+		<nav class="round">
+			<ul>
+				<li><%= link_to "Home", '#' %></li>
+				<li><%= link_to "Home", '#' %></li>
+				<li><%= link_to "Home", '#' %></li>
+			</ul>
+		</nav>	
+		<%= yield %>
+	</div>
+	
 </body>	
 
 </html>
