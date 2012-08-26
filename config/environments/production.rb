@@ -24,7 +24,7 @@ Commute::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.assets.precompile += %w( sprakas-logo.gif )
+  config.assets.precompile += %w( sprakas-logo.gif custom.css)
 
 
 
