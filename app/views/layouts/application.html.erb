@@ -13,24 +13,11 @@
 	</head>
 	
 <body>
+<%= render 'layouts/header' %>
 
-
-<header class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-         <%= link_to image_tag("sprakas-logo.gif", :alt => "Sunil Prakash"), '#' %>
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Home",    '#' %></li>
-              <li><%= link_to "Help",    '#' %></li>
-              <li><%= link_to "Sign in", '#' %></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
 
 

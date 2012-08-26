@@ -1,6 +1,10 @@
 Commute::Application.routes.draw do
   
+  get "users/new"
+
   root :to => 'pages#home'
+
+  match '/signup', :to => 'users#new'
 
   match '/home', :to => 'pages#home'
   match '/contact', :to => 'pages#contact'
