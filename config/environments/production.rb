@@ -15,7 +15,7 @@ Commute::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -24,6 +24,7 @@ Commute::Application.configure do
   config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
   config.assets.precompile += %w( sprakas-logo.gif )
+
 
 
   # Defaults to nil and saved in location specified by config.assets.prefix
