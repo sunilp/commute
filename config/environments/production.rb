@@ -21,7 +21,9 @@ Commute::Application.configure do
   config.assets.digest = true
 
 
-  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif) 
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+  config.assets.precompile += %w( sprakas-logo.gif )
 
 
   # Defaults to nil and saved in location specified by config.assets.prefix
