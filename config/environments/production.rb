@@ -14,7 +14,7 @@ Commute::Application.configure do
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
-  config.assets.precompile += %w[ bootstrap/*.css bootstrap/*.js ]
+  config.assets.precompile += %w[ *.css *.js ]
 
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
