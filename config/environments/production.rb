@@ -14,7 +14,7 @@ Commute::Application.configure do
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
-  config.assets.precompile += %w[ *.css *.js ]
+ 
   config.assets.initialize_on_precompile = false
 
 
@@ -23,9 +23,6 @@ Commute::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
-
-
-  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
   config.assets.precompile += %w( sprakas-logo.gif )
 
