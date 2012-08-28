@@ -57,6 +57,7 @@ GEM
     diff-lcs (1.1.3)
     erubis (2.7.0)
     eventmachine (0.12.10)
+    excon (0.16.2)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (2.3.2)
@@ -75,6 +76,8 @@ GEM
     guard-spork (0.3.2)
       guard (>= 0.8.4)
       spork (>= 0.8.4)
+    heroku-api (0.3.4)
+      excon (~> 0.16.1)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -188,6 +191,7 @@ DEPENDENCIES
   faker (= 1.0.1)
   guard-rspec (= 0.5.5)
   guard-spork (= 0.3.2)
+  heroku-api
   jquery-rails (= 2.0.2)
   json
   pg (= 0.12.2)
