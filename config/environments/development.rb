@@ -1,4 +1,11 @@
 Commute::Application.configure do
+  
+require 'pusher'
+
+Pusher.app_id = '26615'
+Pusher.key    = '00cfb85d263630a60071'
+Pusher.secret = '74ff158093156a4399e2'
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on

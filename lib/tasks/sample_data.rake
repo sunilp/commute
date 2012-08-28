@@ -4,6 +4,7 @@ namespace :db do
     make_users
     make_microposts
     make_relationships
+    post_message
   end
 end
 
@@ -40,3 +41,13 @@ def make_relationships
   followed_users.each { |followed| user.follow!(followed) }
   followers.each      { |follower| follower.follow!(user) }
 end
+
+def post_message
+  users = User.all
+  user = users.first
+  message_from = users[2..50]
+  message_to   = users[3..40]
+  message_from.each { |from| user.domessage!(from, 'hello world')}
+  message_to.each { |to| to.domessage!(user, 'hello world2')}
+end  
+

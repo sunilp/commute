@@ -19,6 +19,13 @@ class User < ActiveRecord::Base
                                    class_name:  "Relationship",
                                    dependent:   :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
+  has_many :messagings, foreign_key: "from_id", dependent: :destroy
+  has_many :message_users, through: :messagings, source: :from
+  has_many :reverse_messagings, foreign_key: "to_id",
+                                   class_name:  "Messaging",
+                                   dependent:   :destroy
+  has_many :messages, through: :reverse_messagings, source: :from
+
 
   before_save {|user| user.email = email.downcase }
   before_save :create_remember_token
@@ -47,6 +54,16 @@ class User < ActiveRecord::Base
   def unfollow!(other_user)
     relationships.find_by_followed_id(other_user.id).destroy
   end
+
+
+  def messaging?(other_user)
+    messagings.find_by_to_id(other_user.id)
+  end
+
+  def domessage!(other_user,message)
+    messagings.create!(to_id: other_user.id, message: message)
+  end
+
 
   private
   def create_remember_token
