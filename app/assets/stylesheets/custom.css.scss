@@ -270,7 +270,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 #chatter{
   z-index:22;
-  width:200px;
+  width:160px;
   height:400px;
   position:fixed;
   right:15px;
@@ -283,7 +283,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 #contMessages{
   width:auto;
   height:200px;
-  overflow:scroll;
+  overflow:auto;
   display:block;
    border: thin solid auto;
    min-height:100px;
