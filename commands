@@ -1,0 +1,500 @@
+   18  git push heroku master
+   19  ruby version
+   20  ruby --version
+   21  pwd
+   22  git add .
+   23  git commit -m "bootstrap-sass"
+   24  git push
+   25  git push heroku
+   26  heroku open
+   27  heroku logs
+   28  git add .
+   29  git commit -m 'prod-fixes'
+   30  git push heroku
+   31  heroku logs
+   32  heroku logs
+   33  git add .
+   34  git commit -m 'prod-fixes'
+   35  git push heroku
+   36  heroku logs
+   37  git add .
+   38  git commit -m 'prod-fixes'
+   39  git push heroku
+   40  heroku logs
+   41  git checkout
+   42  git commit -m 'prod-fixes'
+   43  git push
+   44  git add .
+   45  git commit -m "prod fix"
+   46  git push
+   47  git push heroku master
+   48  git checkout
+   49  git status
+   50  git commit -am "modified"
+   51  git status
+   52  git push
+   53  git status
+   54  git push heroku
+   55  heroku logs
+   56  git commit -am "modified"
+   57  git status
+   58  git push heroku
+   59  git push heroku
+   60  ls
+   61  rails generate controller Users new --no-test-framework
+   62  rails generate integration_test user_pages
+   63  rake routes
+   64  git add .
+   65  git commit -m "links-done"
+   66  git push
+   67  git push heroku master
+   68  heroku open
+   69  git checkout master
+   70  git checkout -b modeling-users
+   71  rails generate model User name:string email:string
+   72  bundle exec rake db:migrate
+   73  bundle install
+   74  bundle install
+   75  bundle exec annotate
+   76  rails generate migration add_index_to_users_email
+   77  bundle exec rake db:rigrate
+   78  bundle exec rake db:migrate
+   79  bundle install
+   80  rails generate migration add_password_digest_to_users password_digest:string
+   81  bundle exec rake db:migrate
+   82  rake db:test:prepare
+   83  bundle exec rake db:test:prepare
+   84  bundle exec rspec spec/
+   85  ruby --version
+   86  ruby -v
+   87  rvm
+   88  source /Users/sunilprakash/.rvm/scripts/rvm
+   89  rvm --default use 1.9.3
+   90  ruby -v
+   91  bundle exec rspec spec/
+   92  bundle install
+   93  bundle exec rspec spec/
+   94  bundle exec rspec spec/
+   95  git add .
+   96  git commit -m "basic user model"
+   97  git checkout master
+   98  git merge modeling-users
+   99  git push 
+  100  git checkout master
+  101  git checkout -b sign-up
+  102  bundle install
+  103  rspec
+  104  rspec
+  105  rspec
+  106  rspec
+  107  rails console
+  108  rspec
+  109  git add .
+  110  git commit -m "user-signup"
+  111  git checkout master
+  112  git merge sign-up
+  113  git commit -a -m "add ssl"
+  114  git push heroku
+  115  heroku open
+  116  heroku logs
+  117  heroku logs
+  118  heroku run rake db:version
+  119  heroku run rake --trace db:migrate
+  120  heroku restart
+  121  git push
+  122  git checkout -b sign-in-out
+  123  git checkout master
+  124  git commit -a -m "fixed"
+  125  git status
+  126  git checkout sign-in-out
+  127  rails generate controller Session --no-test-framework
+  128  rails generate integration_test authentication_pages
+  129  rspec
+  130  rails destroy controller Session --no-test-framework
+  131  rails generate controller Sessions --no-test-framework
+  132  rspec
+  133  rails generate migration add_remember_token_to_users
+  134  bundle exec rake db:migrate
+  135  bundle exec rake db:test:prepare
+  136  rspec
+  137  rspec
+  138  git add .
+  139  git commit -m "signed-in"
+  140  git checkout master
+  141  git merge sign-in-out
+  142  git push
+  143  git push heroku
+  144  heroku run rake db:migrate
+  145  heroku run console
+  146  git add .
+  147  git commit -m "fixed help issue"
+  148  git push
+  149  git push heroku master
+  150  heroku open
+  151  heroku open
+  152  git add .
+  153  git commit -m "prod fix"
+  154  git push heroku
+  155  git add .
+  156  git commit -m "prod fix"
+  157  git push heroku
+  158  heroku open
+  159  git add .
+  160  bundle install
+  161  git commit -m "prof fix"
+  162  git push heroku
+  163  heroku console
+  164  git add .
+  165  git commit -m "none"
+  166  git push heroku master
+  167  git add .
+  168  git commit -m "tyring a prod fix"
+  169  git push
+  170  git push heroku master
+  171  heroku logs
+  172  heroku console
+  173  heroku run console
+  174  heroku logs
+  175  git commit -am "1"
+  176  git push heroku master
+  177  heroku logs
+  178  heroku logs
+  179  heroku rake assets:precompile
+  180  git add .
+  181  git commit -m "2"
+  182  git push heroku
+  183  heroku rake assets:precompile
+  184  bundle exec rake assets:precompile RAILS_ENV=production
+  185  bundle exec rake assets:precompile RAILS_ENV=production
+  186  git add .
+  187  git commit -m "3"
+  188  git push heroku
+  189  heroku logs
+  190  git add .
+  191  git commit -m "3"
+  192  git push heroku
+  193  heroku logs
+  194  heroku rake assets:precompile
+  195  heroku restart
+  196  heroku logs
+  197  heroku rake assets:precompile
+  198  heroku logs
+  199  bundle exec rake assets:precompile RAILS_ENV=production
+  200  git add .
+  201  git commit -m "3"
+  202  git push heroku
+  203  heroku logs
+  204  git push
+  205  git checkout -b updating-users
+  206  bundle install
+  207  rake db:reset
+  208  rake db:populate
+  209  rake db:test:prepare
+  210  bundle install
+  211  rails generate migration add_admin_to_users admin:boolean
+  212  rake db:migrate
+  213  rake db:test:prepare
+  214  rake db:reset
+  215  rake db:populate
+  216  rake db:test:prepare
+  217  git add .
+  218  git commit -m "user-updation"
+  219  git checkout master
+  220  git merge updating-users
+  221  git push heroku master
+  222  heroku pg:reset
+  223  heroku database
+  224  heroku rake db:reset
+  225  heroku run rake db:migrate
+  226  heroku run rake db:populate
+  227  bundle install
+  228  git add .
+  229  git commit "done"
+  230  git commit -m "done"
+  231  git push heroku
+  232  git push heroku
+  233  heroku opne
+  234  heroku open
+  235  heroku logs
+  236  git checkout -b user-microposts
+  237  rails generate model Micropost content:string user_id:integer
+  238  rake db:migrate
+  239  rake db:test:prepare
+  240  rake db:reset
+  241  rake db:populate
+  242  rake db:populate
+  243  rake db:reset
+  244  rake db:populate
+  245  rake db:test:prepare
+  246  git status
+  247  git add .
+  248  git commit -m "microposts"
+  249  git checkout master
+  250  git merge user-microposts
+  251  git push
+  252  heroku config
+  253  git push heroku
+  254  heroku config
+  255  heroku pg:reset fgfhqarubs
+  256  heroku pg:reset database
+  257  heroku run rake db:migrate
+  258  heroku run rake db:populate
+  259  bundle exec rake assets:clear
+  260  bundle exec rake assets:clean
+  261  bundle exec rake assets:clean RAILS_ENV=development
+  262  heroku run rake assets:clean
+  263  heroku run rake assets:precompile
+  264  heroku open
+  265  heroku restart
+  266  bundle exec rake assets:precompile RAILS_ENV=production
+  267  git add .
+  268  git commit -m "pros css fix"
+  269  git push heroku
+  270  heroku open
+  271  git push
+  272  mvn jetty:run
+  273  export DATABASE_URL="postgres://sunilp:prakash123@localhost/spring2app"
+  274  mvn jetty:run
+  275  curl -L https://get.rvm.io | bash -s stable --ruby
+  276  ruby -v
+  277  rvm --default use 1.9.3
+  278  source /Users/sunilprakash/.rvm/scripts/rvm
+  279  rvm --default use 1.9.3
+  280  ruby -v
+  281  heroku open
+  282  cd development
+  283  ls
+  284  cd rails-ws
+  285  ls
+  286  cd commute
+  287  ls
+  288  subl .
+  289  history
+  290  cd development
+  291  ls
+  292  ls
+  293  ls -lrt
+  294  ls
+  295  cd rails-ws/
+  296  ls
+  297  cd commute/
+  298  ls
+  299  ls
+  300  git checkout -b following-users
+  301  git checkout master
+  302  commit -m "smthing"
+  303  git commit -m "smthing"
+  304  git commit -am "smthing"
+  305  git -a
+  306  git add .
+  307  git commit -m "smthing"
+  308  git checkout following-users
+  309  ls
+  310  pwd
+  311  rails generate model Relationship follower_id:integer followed_id:integer
+  312  subl .
+  313  bundle exec rake db:migrate
+  314  bundle exec rake db:test:prepare
+  315  rake db:reset
+  316  rake db:populate
+  317  rake db:test:prepare
+  318  git add .
+  319  git commit -m "added follow"
+  320  git checkout master
+  321  git merge following-users
+  322  git push
+  323  git push
+  324  git push
+  325  bundle exec rake assets:precompile RAILS_ENV=production
+  326  git add .
+  327  git commit -m "server push"
+  328  git push heroku
+  329  heroku pg:reset DATABASE
+  330  heroku config | grep POSTGRESQL
+  331  heroku pg:reset DATABASE
+  332  heroku run rake db:migrate
+  333  heroku run rake db:populate
+  334  git push
+  335  curl -H "Content-Type: application/json" -d "hello world" "http://api.pusherapp.com/apps/26615/channels/test_channel/events?""name=my_event&""body_md5=5eb63bbbe01eeed093cb22bb8f5acdc3&""auth_version=1.0&""auth_key=00cfb85d263630a60071&""auth_timestamp=1346169981&""auth_signature=40ad9c9ee149ae9c48626340cd2bd3957a97264014ae5695f17770c5080c2338&"
+  336  rails s
+  337  ls
+  338  pwd
+  339  cd development
+  340  ls
+  341  cd cproj/
+  342  ls
+  343  subl .
+  344  subl .
+  345  gcc tt.c
+  346  gcc patt.c
+  347  ./a.out
+  348  cd ..
+  349  ls
+  350  cd rails-ws
+  351  cd commute
+  352  ls
+  353  heroku ps
+  354  subl .
+  355  echo "RAKE_ENV=development" >> .env
+  356  git add .
+  357  git commit -m "using thin via procfile"
+  358  git push
+  359  git push heroku
+  360  bundle install
+  361  git add .
+  362  git commit -m "using thin via procfile"
+  363  git push heroku
+  364  heroku ps
+  365  heroku logs
+  366  heroku open
+  367  heroku sql
+  368  bundle install
+  369  git add .
+  370  git commut -m "added heroku"
+  371  git commit -m "added heroku"
+  372  git push heroku
+  373  heroku sql
+  374  git add .
+  375  bundle install
+  376  heroku sql
+  377  heroku pg:sql
+  378  heroku pg:psql
+  379  heroku sql
+  380  bundle install
+  381  bundle install
+  382  bundle check
+  383  bundle install
+  384  rails db
+  385  bundle install
+  386  heroku addons:add pusher:sandbox
+  387  heroku addons:add pusher:sandbox
+  388  rails generate model Messaging from_id:integer to_id:integer message:string
+  389  bundle exec rake db:migrate
+  390  bundle exec rake db:migrate
+  391  bundle exec rake db:prepare
+  392  bundle exec rake db:reset
+  393  bundle exec rake db:populate
+  394  bundle exec rake db:test:prepare
+  395  rake db
+  396  rails db
+  397  git add .
+  398  git commit -m "added messaging"
+  399  ls
+  400  cd ..
+  401  ls
+  402  cd ..
+  403  ls
+  404  cd java-ws
+  405  ls
+  406  cls
+  407  clear
+  408  ls
+  409  cd struts2app/
+  410  ls
+  411  mvn jetty:run
+  412  heroku config
+  413  export DATABASE_URL=postgres://sunilp@localhost:5432/spring2app
+  414  heroku config
+  415  export DATABASE_URL=postgres://sunilp@localhost:5432/spring2app
+  416  mvn jetty:run
+  417  $DATABASE_URL
+  418  export DATABASE_URL=postgres://sunilp@localhost/spring2app
+  419  mvn jetty:run
+  420  $DATABASE_URL
+  421  export DATABASE_URL=postgres://sunilp:prakash123@localhost/spring2app
+  422  mvn jetty:run
+  423  mvn jetty:run
+  424  mvn jetty:run
+  425  mvn jetty:run
+  426  mvn jetty:run
+  427  mvn jetty:run
+  428  git add .
+  429  git commit -m "App"
+  430  mvn jetty:run
+  431  ls
+  432  ls
+  433  ls
+  434  ls -lrt
+  435  ./a.out
+  436  ls
+  437  ls
+  438  ls -lrt
+  439  ./a.out
+  440  ls
+  441  cls
+  442  clear
+  443  pwd
+  444  clear
+  445  ls
+  446  kaun
+  447  angitha
+  448  ls
+  449  clear
+  450  ls
+  451  cd development
+  452  ls
+  453  cd rails-ws/
+  454  ls
+  455  cd commute/
+  456  ls
+  457  rails s
+  458  ls
+  459  ls -lrt
+  460  ls
+  461  mkdir anil
+  462  mkdir anilp
+  463  cd anilp
+  464  clear
+  465  pwd
+  466  cd /
+  467  pwd
+  468  cd /users/sunilprakash/anilp
+  469  pwd
+  470  mkdir cdac
+  471  ls
+  472  cd ../..
+  473  pwd
+  474  ls -l
+  475  ls
+  476  अहो
+  477  ka
+  478  mysql --version
+  479  which mysql
+  480  mysql
+  481  exit
+  482  mysql
+  483  which mysql
+  484  mysql
+  485  $path
+  486  ls
+  487  sudo gem install mysql2
+  488  ls
+  489  la -l
+  490  ls -l
+  491  ls -al
+  492  shell
+  493  $shell
+  494  echo $shell
+  495  echo $SHELL
+  496  $SHELL
+  497  echo $PATH
+  498  ls /usr/local
+  499  ls /usr/local/mysql
+  500  nano 
+  501  ls .bash_profile
+  502  ls -a
+  503  ls
+  504  ls 
+  505  gcc
+  506  gcc -v
+  507  cd development
+  508  ls
+  509  cd rails-ws
+  510  ls
+  511  cd commute
+  512  subl .
+  513  curl -H "Content-Type: application/json" -d "hello world" "http://api.pusherapp.com/apps/26615/channels/test_channel/events?""name=my_event&""body_md5=5eb63bbbe01eeed093cb22bb8f5acdc3&""auth_version=1.0&""auth_key=00cfb85d263630a60071&""auth_timestamp=1346558496&""auth_signature=9a7d358189ba084b22cdf0647b70ac4b4a388ae7a3051112656cfe2128ca6c57&"
+  514  curl -H "Content-Type: application/json" -d "hello world" "http://api.pusherapp.com/apps/26615/channels/private-102/events?""name=new_message&""body_md5=5eb63bbbe01eeed093cb22bb8f5acdc3&""auth_version=1.0&""auth_key=00cfb85d263630a60071&""auth_timestamp=1346558496&""auth_signature=9a7d358189ba084b22cdf0647b70ac4b4a388ae7a3051112656cfe2128ca6c57&"
+  515  curl -H "Content-Type: application/json" -d "hello world" "http://api.pusherapp.com/apps/26615/channels/private-102/events?""name=new_message&""body_md5=5eb63bbbe01eeed093cb22bb8f5acdc3&""auth_version=1.0&""auth_key=00cfb85d263630a60071&""auth_timestamp=1346558496&""auth_signature=9a7d358189ba084b22cdf0647b70ac4b4a388ae7a3051112656cfe2128ca6c57&"
+  516  curl -H "Content-Type: application/json" -d "hello world" "http://api.pusherapp.com/apps/26615/channels/private-102/events?""name=new_message&"
+  517  history > commands

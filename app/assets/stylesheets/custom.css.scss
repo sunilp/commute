@@ -265,3 +265,25 @@ aside {
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"] {
     height: 40px;
 }
+
+#chatter{
+  z-index:22;
+  width:200px;
+  height:400px;
+  position:fixed;
+  right:15px;
+  top:80px;
+}
+
+#contMessages{
+  width:auto;
+  height:200px;
+  overflow:scroll;
+  display:block;
+   border: thin solid auto;
+}
+#notify{
+  z-index:11;
+  display:none;
+  border: thin solid yellow;
+}

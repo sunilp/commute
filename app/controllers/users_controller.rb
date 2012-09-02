@@ -8,6 +8,8 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    @newUser = User.find_by_id(params[:id])
+
   	@microposts = @user.microposts.paginate(page: params[:page])
   end	
 
@@ -53,6 +55,11 @@ end
 
 def edit
 end
+
+def all_user
+    @all_users = User.id.where("name like ?","%#{params[1]}")
+    render json: @all_users.id
+end 
 
 def update
     if @user.update_attributes(params[:user])

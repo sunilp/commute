@@ -1,0 +1,13 @@
+<div id="chatter">
+<%= form_for(:messaging,:url => {:controller=>'messagings' ,:action => 'create'}, remote: true) do |f| %>
+  <div><%= f.text_field :to_id , data: {autocomplete_source: users_path} %></div>
+  	  <%= f.label :message %>
+  	  <div id="contMessages">
+
+  	  </div>	
+
+      <%= f.text_field :message %>
+
+  <%= f.submit "Message", class: "btn btn-large btn-primary" ,id:"chatter_btn" %>
+<% end %>
+</div>
