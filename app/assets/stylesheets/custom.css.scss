@@ -119,6 +119,8 @@ a:link, a:visited {
 .main-content{
   
   padding: 15px 0px;
+  min-height:800px;
+  height:100%;
 
 }
 
@@ -273,6 +275,9 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   position:fixed;
   right:15px;
   top:80px;
+  input[type="text"]{
+  height:20px;
+  }
 }
 
 #contMessages{
@@ -281,6 +286,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   overflow:scroll;
   display:block;
    border: thin solid auto;
+   min-height:100px;
 }
 #notify{
   z-index:11;
