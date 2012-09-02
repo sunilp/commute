@@ -21,22 +21,22 @@
 
     // Some useful debug msgs
     pusher.connection.bind('connecting', function() {
-      $('div#status').text('Connecting to Pusher...');
+      $('div#status').text('Connecting to Commute...');
     });
     pusher.connection.bind('connected', function() {
-      $('div#status').text('Connected to Pusher!');
+      $('div#status').text('Connected to Commute!');
     });
     pusher.connection.bind('failed', function() {
-      $('div#status').text('Connection to Pusher failed :(');
+      $('div#status').text('Connection to Commute failed :(');
     });
     channel.bind('subscription_error', function(status) {
-      $('div#status').text('Pusher subscription_error for' +<%= current_user.id %>);
+      $('div#status').text('Commute subscription_error for' +<%= current_user.id %>);
     });
 
   channel.bind('new_message'+<%= current_user.id %>, function(data) {
 
     $("#contMessages").append(data.from + ' : ' + data.message + '<br/>');
-    
+
   msg = data.from + ' has sent you message: ' + data.message;
   dom_notify(msg);
 });
@@ -71,10 +71,11 @@ function dom_notify(msg) {
     	<% end %>	
       <%= yield %>
 
-       <div id="status">
-       </div> 
+       
 
       <%= render 'layouts/footer' %>
+      <div id="status">
+       </div> 
       <%= debug(params) if Rails.env.development? %>
     </div>
 
