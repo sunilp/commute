@@ -36,6 +36,7 @@
   channel.bind('new_message'+<%= current_user.id %>, function(data) {
 
     $("#contMessages").append(data.from + ' : ' + data.message + '<br/>');
+$('#contMessages').scrollTop($('#contMessages').height());
 
   msg = data.from + ' has sent you message: ' + data.message;
   dom_notify(msg);
