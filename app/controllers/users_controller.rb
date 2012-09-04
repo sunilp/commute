@@ -59,8 +59,8 @@ end
 
 def allusers
   if params[:term]
-    like="%".concat(params[:term].concat("%"))
-    all_users = User.where("name like ?",like)
+    like="%" + params[:term] +"%"
+    all_users = User.where("lower(name) like lower(?)",like)
   else
     all_users = User.all
    end 
