@@ -1,6 +1,8 @@
 class MessagingsController < ApplicationController
   before_filter :signed_in_user
   protect_from_forgery :except => :auth # stop rails CSRF protection for this action
+  
+
 
   def create
     puts "id is:"+ params[:messaging][:to_id].to_s

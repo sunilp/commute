@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   before_filter :signed_in_user, 
-                only: [:index, :edit, :update, :destroy, :following, :followers]
+                only: [:index, :edit, :update, :destroy, :following, :followers, :allusers]
   before_filter :correct_user,   only: [:edit, :update]
   before_filter :admin_user,     only: :destroy
 
@@ -57,9 +57,15 @@ end
 def edit
 end
 
-def all_user
-    @all_users = User.id.where("name like ?","%#{params[1]}")
-    render json: @all_users.id
+def allusers
+  if params[:term]
+    like="%".concat(params[:term].concat("%"))
+    all_users = User.where("name like ?",like)
+  else
+    all_users = User.all
+   end 
+    list = all_users.map {|u| Hash[id:u.id, label:u.name, name:u.name]}
+    render json: list
 end 
 
 def update

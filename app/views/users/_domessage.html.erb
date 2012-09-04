@@ -3,7 +3,8 @@
   <div>
 <span class="add-on">
 	<i class="icon-user"></i>
-  	<%= f.text_field :to_id , data: {autocomplete_source: users_path}, class: "span1" %>
+  	<%= f.text_field :to_name , class: "ui-autocomplete-input span2" %>
+  	<%= f.hidden_field :to_id %>
 </span>
   </div>
   	  <%= f.label :messages %>

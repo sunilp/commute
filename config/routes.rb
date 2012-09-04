@@ -1,7 +1,7 @@
 Commute::Application.routes.draw do
   resources :users do
     member do
-      get :following, :followers, :all_user
+      get :following, :followers, :allusers
     end
   end
   resources :sessions, only: [:new, :create, :destroy]
@@ -22,7 +22,7 @@ Commute::Application.routes.draw do
   match '/help', to: 'pages#help'
 
   post 'pusher/auth'
-
+  match '/allusers', to: 'users#allusers'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
