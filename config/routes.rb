@@ -21,7 +21,7 @@ Commute::Application.routes.draw do
   match '/about', :to => 'pages#about'
   match '/help', to: 'pages#help'
 
-
+  post 'pusher/auth'
 
 
   # The priority is based upon order of creation:

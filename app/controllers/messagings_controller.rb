@@ -7,7 +7,7 @@ class MessagingsController < ApplicationController
     @user = User.find_by_id(params[:messaging][:to_id])
    
 
-    Pusher['msg'+params[:messaging][:to_id]].trigger('new_message'+params[:messaging][:to_id], {:from => current_user.name, :subject => 'talk',:message =>params[:messaging][:message] })
+    Pusher['private-'+params[:messaging][:to_id]].trigger('new_message'+params[:messaging][:to_id], {:from => current_user.name, :subject => 'talk',:message =>params[:messaging][:message] })
 #Pusher['test_channel'].trigger('new_message', {:from => current_user.name, :subject => 'talk'})
 
     @messaging = Messaging.new({:from_id => current_user.id, :to_id => params[:messaging][:to_id], :message => params[:messaging][:message]})
