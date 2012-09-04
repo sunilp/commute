@@ -276,7 +276,11 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   right:15px;
   top:80px;
   input[type="text"]{
-  height:20px;
+  height:30px;
+  }
+  span.add-on{
+  height:30px;
+  line-height:27px;
   }
 }
 
