@@ -1,4 +1,4 @@
- //= require socket.io
+ //nothing
 
 window.Commute = {
   Models: {},
