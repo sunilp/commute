@@ -1,7 +1,7 @@
 class MessagingsController < ApplicationController
   before_filter :signed_in_user
   protect_from_forgery :except => :auth # stop rails CSRF protection for this action
-  
+  connections = []
 
 
   def create
@@ -9,8 +9,9 @@ class MessagingsController < ApplicationController
     @user = User.find_by_id(params[:messaging][:to_id])
    
 
-    Pusher['private-'+params[:messaging][:to_id]].trigger('new_message'+params[:messaging][:to_id], {:from => current_user.name, :subject => 'talk',:message =>params[:messaging][:message] })
-#Pusher['test_channel'].trigger('new_message', {:from => current_user.name, :subject => 'talk'})
+    #Pusher['presence-'+params[:messaging][:to_id]].trigger('new_message'+params[:messaging][:to_id], {:from => current_user.name, :subject => 'talk',:message =>params[:messaging][:message] })
+Pusher['presence-openCommute'].trigger('new_message'+params[:messaging][:to_id], {:from => current_user.name, :subject => 'talk',:message =>params[:messaging][:message] })
+
 
     @messaging = Messaging.new({:from_id => current_user.id, :to_id => params[:messaging][:to_id], :message => params[:messaging][:message]})
     @messaging.save
@@ -30,6 +31,8 @@ class MessagingsController < ApplicationController
       render :text => "Not authorized", :status => '403'
     end
   end
+
+
 
 
   def destroy

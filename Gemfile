@@ -6,10 +6,11 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
-gem 'thin'
 gem 'heroku-api'
 gem 'oa-oauth'
 gem 'pusher'
+gem 'backbone-on-rails'
+gem 'thin'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -48,7 +49,7 @@ end
 
 group :production do
     gem 'pg', '0.12.2'
-
+    
 end
 
 
