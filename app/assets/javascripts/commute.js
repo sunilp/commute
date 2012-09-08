@@ -6,7 +6,7 @@ window.Commute = {
   Views: {},
   Routers: {},
   init: function() {
-    //alert('Hello from Backbone!');
+    alert('@test');
   }
 };
 
