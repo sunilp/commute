@@ -6,6 +6,11 @@ Pusher.app_id = '26615'
 Pusher.key    = '00cfb85d263630a60071'
 Pusher.secret = '74ff158093156a4399e2'
 
+PUBNUB_PUBLISH_KEY = 'pub-c-2f362d40-f91b-4e07-96cb-c44636de6572'
+PUBNUB_SUBSCRIBE_KEY = 'sub-c-2421483a-fa46-11e1-a7b4-7f11646c67a0'
+PUBNUB_SECRET_KEY = 'sec-c-NjQxZWFmMDItMDA3MS00NjNjLTg3ZTUtYWU4MGYxNmUxMzgy'
+
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on

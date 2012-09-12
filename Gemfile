@@ -12,6 +12,7 @@ gem 'pusher'
 gem 'backbone-on-rails'
 gem 'thin'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -20,6 +21,7 @@ group :development, :test do
     gem 'rspec-rails', '2.10.0'
     gem 'guard-rspec', '0.5.5'
     gem 'annotate', '2.5.0'
+
 end
 
 

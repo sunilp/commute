@@ -24,6 +24,8 @@ Commute::Application.routes.draw do
   post 'pusher/auth'
   match '/allusers', to: 'users#allusers'
 
+  match '/socket.io/:id', to: 'users#allusers'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

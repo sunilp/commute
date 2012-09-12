@@ -1,4 +1,4 @@
- //nothing
+ //= require socket.io
 
 window.Commute = {
   Models: {},
@@ -6,10 +6,6 @@ window.Commute = {
   Views: {},
   Routers: {},
   init: function() {
-    alert('@test');
+    //alert('@test');
   }
 };
-
-$(document).ready(function(){
-  Commute.init();
-});
